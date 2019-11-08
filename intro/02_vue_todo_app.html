@@ -21,9 +21,9 @@
       <option value="completed">완료 항목</option>
     </select>
     <input type="text" v-model='newTodo' v-on:keyup.enter='addTodo()'>
-    <button v-on:click='addTodo'>+</button>
+    <button v-on:click='addTodo'>+</button> <!-- v-on은 @로 쓰일 수 있다. -->
     <button v-on:click='filterling'>완료항목삭제</button>
-    <li v-for='todo in computedTodosByStatus' v-bind:class="{completed: todo.completed}" v-bind:key="todo.id">
+    <li v-for='todo in computedTodosByStatus' v-bind:class="{completed: todo.completed}" v-bind:key="todo.id"> <!-- v-bind는 :으로만 나타낼 수 있다. -->
       <input type="checkbox" v-model='todo.completed'>
       {{todo.title}}
     </li>

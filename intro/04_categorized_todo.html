@@ -27,7 +27,7 @@
       <button v-on:click="removeTodo(todo.id)">x</button>
     </li>
     <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo">
-    <button v-on:click="addTodo">+</button>
+    <button v-on:click="addTodo">+</button> 
     <li v-for="todo in todos" v-bind:key="todo.id">
       <span>{{ todo.content }}</span>
       <button v-on:click="removeTodo(todo.id)">x</button>
